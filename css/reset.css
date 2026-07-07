@@ -1,0 +1,80 @@
+/* ============================================
+       RESET & BASE STYLES
+    ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../assets/Fonts/Vazir.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../assets/Fonts/Vazir-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: linear-gradient(135deg, #050816 0%, #0a0a2a 50%, #050816 100%);
+  color: #ffffff;
+  font-family: Vazir, Tahoma, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 20% 50%,
+    rgba(0, 194, 255, 0.03) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+ul {
+  list-style: none;
+}
+
+/* ============================================
+       CUSTOM SCROLLBAR
+    ============================================ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a2a;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00c2ff, #b026ff);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #b026ff, #00c2ff);
+}
